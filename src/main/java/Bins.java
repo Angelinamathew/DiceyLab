@@ -8,13 +8,14 @@ public class Bins {
     public Bins(int min, int max) {
         this.min = min;
         this.max = max;
+        values = new int[max-min+1];
     }
 
-    public int getBin(int i) {
-        return this.values[i - this.min];
+    public Integer getBin(int binNum) {
+        return this.values[binNum - this.min];
     }
 
-    public void incrementBins(int i) {
-         this.values[i-this.min]++;
+    public void incrementBins(int binNum) {
+         this.values[binNum -this.min]++;
     }
 }
